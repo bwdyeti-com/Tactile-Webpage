@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Tactile - Installation">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:image" content="http://www.bwdyeti.com/tactile/images/TactileLogo.png">
+	<title>Tactile Quickstart | Installation</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico" />
+</head>
+
+<body>
+<div id="Logo">
+	<h3><a href="index.html">Back to Index</a></h3>
+</div>
+
+<div id="Heading">Installation</div>
+
+<div id="Main">
+	<p>These instructions are designed for Visual Studio 2019 on Windows 10. If you're using different versions, you may have to modify or add steps to the process.</p>
+	
+	<p>Open up 'Tactile\Installation\1. Redist'.<br/>
+	<img src="images/install_00.png"/></p>
+	
+	<p>Attempt to install dotNetFx40_Full_setup.exe. It apparently comes pre-installed on Windows 10, and if already installed it will let you know.<br/>
+	<img src="images/install_01.png"/></p>
+	
+	<p>Install xnafx40_redist.msi.<br/>
+	<img src="images/install_02.png"/><br/>
+	<img src="images/install_03.png"/></p>
+	
+	<p>Install oalinst.exe.<br/>
+	<img src="images/install_04.png"/></p>
+	
+	<p>Next open 'Tactile\Installation\2. VS'.<br/>
+	<img src="images/install_05.png"/></p>
+	
+	<p>Run vs_Community2019.exe. You'll need an internet connection to download the installation files.<br/>
+	<img src="images/install_06.png"/><br/>
+	<img src="images/install_07.png"/></p>
+	
+	<p>Select '.NET desktop development' under Desktop & Mobile, then begin installation.<br/>
+	<img src="images/install_08.png"/><br/>
+	<img src="images/install_09.png"/><br/>
+	<img src="images/install_10.png"/></p>
+	
+	<p>Now open 'Tactile\Installation\3. XNA GS'.<br/>
+	<img src="images/install_11.png"/></p>
+	
+	<p>Install DirectX/DXSETUP.exe.<br/>
+	<img src="images/install_12.png"/></p>
+	
+	<p>Install XNA Game Studio Platform Tools.msi.<br/>
+	<img src="images/install_13.png"/></p>
+	
+	<p>Install XNA Game Studio Shared.msi.<br/>
+	<img src="images/install_14.png"/></p>
+	
+	<p>XNA doesn't natively support the most recent versions of Visual Studio, so the remaining steps are to make them compatible.<br/>
+	Open '4. XNA Game Studio 4.0.vsix' to add XNA templates and support to newer versions of Visual Studio. Select the version of Visual Studio you're using in the dialog box.<br/>
+	<img src="images/install_15.png"/></p>
+	
+	<p>If it says it's incompatible, hit 'Yes' anyway.<br/>
+	<img src="images/install_16.png"/></p>
+	
+	<p>You now need to copy XNA files, for newer versions of VS to recognize them. Running '4. Copy XNA Files.bat' should open the folders you need automatically.<br/>
+	<img src="images/install_17.png"/></p>
+	
+	<p>If not, the folders are:<br/>
+	- The MSBuild location that has the XNA files, default 'C:\Program Files (x86)\MSBuild\Microsoft'<br/>
+	- VS's MSBuild folder, default 'C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft'.<br/>
+	Copy the 'XNA Game Studio' folder from the first to the second.<br/>
+	<img src="images/install_18.png"/></p>
+	
+	<p>Provide admin privileges when prompted<br/>
+	<img src="images/install_19.png"/><br/>
+	<img src="images/install_20.png"/></p>
+	
+	<p>You next may need to register a dll to avoid some errors. These directions are derived from <a href="http://flatredball.com/visual-studio-2017-xna-setup/">http://flatredball.com/visual-studio-2017-xna-setup/</a>.</p>
+	
+	<p>Run 'Developer Command Prompt for VS 2019' as an administrator.<br/>
+	<img src="images/install_21.png"/><br/>
+	<img src="images/install_22.png"/></p>
+	
+	<p>Enter the command 'cd "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin"'. This is a subfolder of the location you copied files into above.<br/>
+	<img src="images/install_23.png"/></p>
+	
+	<p>Enter the command 'gacutil /i Microsoft.Build.Framework.dll'.<br/>
+	<img src="images/install_24.png"/></p>
+	
+	<p>You now have everything you need to program in C# and work with XNA installed.<br/>
+	You can now run the Tactile Core Editor and create a new project.<br/>
+	Visit the <a href="https://github.com/bwdyeti-com/Tactile-Engine">Tactile GitHub</a> page if you need more information.
+</div>
+<div id="Footer">
+	<p>
+	&copy; 2020 bwdyeti.com
+	</p>
+</div>
+</body>
+</html>
