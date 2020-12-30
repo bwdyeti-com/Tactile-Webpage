@@ -1,0 +1,79 @@
+div#Center{
+	min-height: 90vh;
+	
+	display: -webkit-grid;
+	display:         grid;
+	-webkit-align-items: center;
+		align-items: center;
+}
+
+div#Main{
+	margin: 5em auto 10em auto;
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-justify-content: center;
+		justify-content: center;
+	flex-wrap: wrap;
+}
+div#Logo{
+	max-width: 100%;
+	
+	text-align: center;
+	
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-align-items: center;
+		align-items: center;
+	-webkit-justify-content: center;
+		justify-content: center;
+}
+div#Logo h3{
+	margin-left: 2%;
+}
+div#Logo span{
+	font-family: Oxygen Mono, Lucida Console, monospace;
+	display: block;
+	margin: -1em 5em 0em 5em;
+	max-width: 100%;
+	text-align: center;
+}
+
+
+div.main-button{
+}
+div.main-button > a, span.scnd-button{
+	display: inline-block;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-weight:bold;
+	text-align:center;
+	width:auto;
+	height:auto;
+	margin: 0.1em 0.6em;
+}
+div.main-button > a:hover, span.scnd-button:hover{
+	text-decoration: none;
+}
+div.main-button > a {
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-align-items: center;
+		align-items: center;
+	-webkit-justify-content: center;
+		justify-content: center;
+	
+	min-width:8.5em;
+	padding: 0.75em 1em;
+	
+	font-size:160%;
+}
+
+div.main-button a{
+	color: #ffffff;
+	background-color: #808090;
+	
+	-webkit-transition: background-color 0.4s;
+	   -moz-transition: background-color 0.4s;
+	        transition: background-color 0.4s;
+}
