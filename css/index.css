@@ -70,10 +70,20 @@ div.main-button > a {
 }
 
 div.main-button a{
-	color: #ffffff;
-	background-color: #808090;
+	color: #000000;
+	background-color: #ffffff;
+	border: solid black;
 	
-	-webkit-transition: background-color 0.4s;
-	   -moz-transition: background-color 0.4s;
-	        transition: background-color 0.4s;
+	-webkit-transition: background-color 0.2s,
+	                    color 0.2s;
+	   -moz-transition: background-color 0.2s,
+	                    color 0.2s;
+	        transition: background-color 0.2s,
+		            color 0.2s;
+}
+
+div.main-button a:hover, div.main-button a:focus{
+	color: #ffffff;
+	background-color: #000000;
+	border: solid black;
 }
