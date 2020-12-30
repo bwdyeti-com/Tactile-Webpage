@@ -82,7 +82,7 @@ div.main-button a{
 		            color 0.2s;
 }
 
-div.main-button a:hover, div.main-button a:focus{
+div.main-button a:hover{
 	color: #ffffff;
 	background-color: #000000;
 	border: solid black;
